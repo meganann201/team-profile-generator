@@ -9,7 +9,7 @@ test('creates a github property', () => {
 test("gets engineer's role", () => {
     const engineer = new Engineer('Dave');
   
-    expect(engineer.getRole()).toHaveProperty('role');
+    expect(engineer.getRole()).toEqual('Engineer');
   });
 
   test("gets engineer's github", () => {

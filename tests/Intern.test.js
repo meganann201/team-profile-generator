@@ -9,7 +9,7 @@ test('creates a school property', () => {
 test("gets intern's role", () => {
     const intern = new Intern('Dave');
   
-    expect(intern.getRole()).toHaveProperty('role');
+    expect(intern.getRole()).toEqual('Intern');
   });
 
   test("gets intern's role", () => {

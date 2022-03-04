@@ -11,5 +11,5 @@ test('creates an employee object', () => {
 test("gets employee's role", () => {
     const employee = new Employee('Dave');
   
-    expect(employee.getRole()).toHaveProperty('role');
+    expect(employee.getRole()).toEqual('Employee');
   });

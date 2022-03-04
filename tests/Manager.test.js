@@ -9,5 +9,5 @@ test('creates an officeNumber property', () => {
 test("gets manager's role", () => {
     const manager = new Manager('Dave');
   
-    expect(manager.getRole()).toHaveProperty('role');
+    expect(manager.getRole()).toEqual('Manager');
   });
