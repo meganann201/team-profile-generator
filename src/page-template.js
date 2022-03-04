@@ -1,10 +1,10 @@
 const generateManager = function (manager) {
   return `
   <div class="col-4 mt-4">
-      <div class="card h-100">
-          <div class="card-header">
+      <div class="card h-100 shadow p-3 mb-5 bg-white rounded">
+          <div class="card-header bg-info text-white">
               <h3>${manager.name}</h3>
-              <h4>Manager</h4><i class="material-icons">content_paste</i>
+              <h5>Manager <i class="fa-solid fa-mug-hot"></i></h5>
           </div>
           <div class="card-body">
               <p class="id">ID: ${manager.id}</p>
@@ -20,15 +20,15 @@ const generateManager = function (manager) {
 const generateEngineer = function (engineer) {
   return `
   <div class="col-4 mt-4">
-      <div class="card h-100">
-          <div class="card-header">
+      <div class="card h-100 shadow p-3 mb-5 bg-white rounded">
+          <div class="card-header bg-info text-white">
               <h3>${engineer.name}</h3>
-              <h4>Engineer</h4><i class="material-icons">laptop_mac</i>
+              <h5>Engineer <i class="fa-solid fa-laptop-code"></i></h5>
           </div>
           <div class="card-body">
               <p class="id">ID: ${engineer.id}</p>
               <p class="email">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
-              <p class="github">Github: <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
+              <p class="github">Github: <a target="_blank" href="https://github.com/${engineer.github}">${engineer.github}</a></p>
           </div>
       </div>
   </div>
@@ -39,10 +39,10 @@ const generateEngineer = function (engineer) {
 const generateIntern = function (intern) {
   return `
   <div class="col-4 mt-4">
-      <div class="card h-100">
-          <div class="card-header">
+      <div class="card h-100 shadow p-3 mb-5 bg-white rounded">
+          <div class="card-header bg-info text-white">
               <h3>${intern.name}</h3>
-              <h4>Intern</h4><i class="material-icons">assignment_ind</i>
+              <h5>Intern <i class="fa-solid fa-graduation-cap"></i></h5>
           </div>
           <div class="card-body">
               <p class="id">ID: ${intern.id}</p>
@@ -88,7 +88,7 @@ generateHTML = (data) => {
       
   }
 
-  // joining strings 
+   
   const employeeCards = pageArray.join('')
 
   // return to generated page
@@ -106,16 +106,14 @@ return`
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Profile</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Public+Sans:300i,300,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <nav class="navbar" id="navbar">
-            <span class="navbar-brand mb-0 h1 w-100 text-center" id="navbar-text">Team Profile</span>
+        <nav id="navbar" class="bg-info">
+            <h1 class="navbar mb-6 justify-content-center text-white" id="navbar-text">Team Profile  <i class="fa-solid fa-users"></i></h1>
         </nav>
     </header>
     <main>
@@ -135,6 +133,6 @@ return`
 `;
 }
 
-// export to index
+
 module.exports = generateHTML; 
 
